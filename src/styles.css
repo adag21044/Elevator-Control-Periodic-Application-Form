@@ -1,4 +1,3 @@
-/* Custom styles for dropdown menus */
 .dropdown-menu {
     position: absolute;
     background-color: #ffffff;
@@ -26,39 +25,26 @@
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
-/* Triangle icon */
-.dropdown-toggle::after {
-    content: '';
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #4a5568;
-    margin-left: 5px;
-    transition: transform 0.3s ease-in-out;
-    transform: rotate(-90deg);
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.dropdown:hover .dropdown-toggle::after {
-    transform: rotate(0deg);
-}
-
-/* Positioning for top-right button */
-.top-right {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* Adjust color for non-dropdown buttons */
-.non-dropdown-btn {
+#address {
+    padding: 10px 20px; /* Match padding with dropdown items */
     color: #374151;
-    padding: 10px 20px;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+    width: auto;
+    white-space: nowrap;
+    margin-top: 8px;
 }
 
-.non-dropdown-btn:hover {
-    background-color: #10b981;
+#address a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #374151;
+    transition: background-color 0.3s;
+    border: 1px solid #ccc;
+}
+
+#address a:hover {
+    background-color: #f3f4f6;
 }
