@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for horizontal dropdowns and footer */
+        /* Custom styles for dropdown menus */
         .dropdown-menu {
+            display: none;
             position: absolute;
             background-color: #ffffff;
-            text-align: left;
-            display: none;
             z-index: 10;
             border: 1px solid #ccc;
             width: auto;
@@ -30,10 +28,6 @@
 
         .dropdown-menu a:hover {
             background-color: #f3f4f6;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            display: block;
         }
 
         /* Triangle icon */
@@ -104,9 +98,15 @@
             color: #ffffff; /* Text color */
             text-align: center; /* Centers the text */
         }
+
+        /* Required field indicator */
+        .required::after {
+            content: '*';
+            color: red;
+            margin-left: 5px;
+        }
     </style>
 </head>
-
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <nav class="bg-white shadow mb-8 relative">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center relative">
@@ -186,7 +186,6 @@
         <div class="container mx-auto">
             <div class="py-20">
                 <h1 class="text-6xl font-semibold"></h1>
-                
             </div>
         </div>
     </header>
@@ -195,9 +194,25 @@
         <!-- Main content -->
         <main>
             <section>
-                <h4 class="font-bold text-lg mb-4">Muayene Türünü Seçiniz</h4>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <h4 class="font-bold text-lg mb-4 required">Muayene Türünü Seçiniz</h4>
+                <div class="relative inline-block text-left">
+                    <div>
+                        <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
+                            Seçiniz
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <div class="py-1" role="none">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type1</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type2</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                     <div class="bg-white shadow-md rounded-lg overflow-hidden">
                         <img src="/mnt/data/image.png" alt="Recipe Image" class="w-full">
                         <div class="p-4">
@@ -237,24 +252,24 @@
     <!-- JavaScript for dropdown functionality -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-
-            dropdownMenus.forEach(menu => {
-                const parentButton = menu.previousElementSibling;
-
-                parentButton.addEventListener('click', function () {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (event) {
+                    const menu = this.nextElementSibling;
                     menu.classList.toggle('hidden');
+                    event.stopPropagation();
                 });
+            });
 
-                document.addEventListener('click', function (event) {
-                    if (!parentButton.contains(event.target) && !menu.contains(event.target)) {
+            document.addEventListener('click', function () {
+                const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+                dropdownMenus.forEach(menu => {
+                    if (!menu.classList.contains('hidden')) {
                         menu.classList.add('hidden');
                     }
                 });
             });
         });
     </script>
-
 </body>
-
 </html>
