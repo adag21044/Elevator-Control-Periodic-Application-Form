@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,17 +52,39 @@
         .dropdown:hover .dropdown-toggle::after {
             transform: rotate(0deg);
         }
+
+        /* Positioning for top-right button */
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Adjust color for non-dropdown buttons */
+        .non-dropdown-btn {
+            color: #374151; /* Black text */
+            padding: 10px 20px;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s;
+        }
+
+        .non-dropdown-btn:hover {
+            background-color: #10b981; /* Green color on hover */
+        }
     </style>
 </head>
+
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <nav class="bg-white shadow mb-8">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <nav class="bg-white shadow mb-8 relative"> <!-- Add 'relative' class for positioning -->
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center relative">
             <div class="flex items-center space-x-2">
                 <img src="/public/image.png" alt="Logo" class="h-8 w-8">
                 <h1 class="font-bold uppercase text-lg text-gray-800">
-                    <a href="/">Food Ninja</a>
+                    <a href="/"></a>
                 </h1>
                 <div class="flex space-x-4">
+                    <!-- Dropdowns and non-dropdown buttons -->
+                    <!-- Dropdown for Kurumsal -->
                     <div class="dropdown relative">
                         <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Kurumsal</span>
@@ -72,6 +95,7 @@
                             <a href="#">Subitem 3</a>
                         </div>
                     </div>
+                    <!-- Dropdown for Sektörler -->
                     <div class="dropdown relative">
                         <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Sektörler</span>
@@ -82,6 +106,7 @@
                             <a href="#">Subitem 3</a>
                         </div>
                     </div>
+                    <!-- Dropdown for Hizmetler -->
                     <div class="dropdown relative">
                         <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Hizmetler</span>
@@ -92,6 +117,7 @@
                             <a href="#">Subitem 3</a>
                         </div>
                     </div>
+                    <!-- Dropdown for Sürdürülebilirlik -->
                     <div class="dropdown relative">
                         <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Sürdürülebilirlik</span>
@@ -102,57 +128,27 @@
                             <a href="#">Subitem 3</a>
                         </div>
                     </div>
-                    <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
-                            <span>Başvurular</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="#">Subitem 1</a>
-                            <a href="#">Subitem 2</a>
-                            <a href="#">Subitem 3</a>
-                        </div>
-                    </div>
-                    <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
-                            <span>Yönetmelikler</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="#">Subitem 1</a>
-                            <a href="#">Subitem 2</a>
-                            <a href="#">Subitem 3</a>
-                        </div>
-                    </div>
-                    <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
-                            <span>Galeri</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="#">Subitem 1</a>
-                            <a href="#">Subitem 2</a>
-                            <a href="#">Subitem 3</a>
-                        </div>
-                    </div>
-                    <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
-                            <span>İletişim</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="#">Subitem 1</a>
-                            <a href="#">Subitem 2</a>
-                            <a href="#">Subitem 3</a>
-                        </div>
-                    </div>
+                    <!-- Non-dropdown buttons -->
+                    <a href="#" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center non-dropdown-btn">
+                        Başvurular
+                    </a>
+                    <a href="#" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center non-dropdown-btn">
+                        Yönetmelikler
+                    </a>
+                    <a href="#" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center non-dropdown-btn">
+                        Galeri
+                    </a>
+                    <a href="#" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center non-dropdown-btn">
+                        İletişim
+                    </a>
                 </div>
             </div>
-            <ul class="flex space-x-4">
-                <li class="text-gray-700 font-bold"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="bg-red-500 hover:bg-green-700 text-white font-sans py-2 px-4 rounded">Belge Sorgulama</a></li>
-            </ul>
+            <!-- Move Belge Sorgulama button here -->
+            <a href="#" class="bg-red-500 hover:bg-green-700 text-white font-sans py-2 px-4 rounded top-right">Belge Sorgulama</a>
         </div>
     </nav>
 
+    <!-- Main content -->
     <div class="container mx-auto">
         <main>
             <header class="mb-8">
@@ -174,13 +170,14 @@
             <section>
                 <h4 class="font-bold text-lg mb-4">Most Popular</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!--cards go here-->
+                    <!-- Placeholder for most popular cards -->
                 </div>
             </section>
         </main>
-        
+
+        <!-- Submission button -->
         <div class="text-center mt-8 mb-8">
-            <button class="bg-gray-800 text-white font-bold py-2 px-4 rounded">Gönder</button>
+            <button class="bg-gray-800 text-white font-bold py-2 px-4 rounded">Submit</button>
         </div>
     </div>
 
@@ -188,10 +185,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-            
+
             dropdownMenus.forEach(menu => {
                 const parentButton = menu.previousElementSibling;
-                
+
                 parentButton.addEventListener('click', function () {
                     menu.classList.toggle('hidden');
                 });
@@ -204,5 +201,7 @@
             });
         });
     </script>
+
 </body>
+
 </html>
