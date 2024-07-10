@@ -16,6 +16,7 @@
             border: 1px solid #ccc;
             width: auto;
             white-space: nowrap;
+            margin-top: 8px; /* Adjust margin to create space between buttons */
         }
 
         .dropdown-menu a {
@@ -33,6 +34,23 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
+
+        /* Triangle icon */
+        .dropdown-toggle::after {
+            content: '';
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #4a5568;
+            margin-left: 5px;
+            transition: transform 0.3s ease-in-out;
+            transform: rotate(-90deg);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(0deg);
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -45,7 +63,7 @@
                 </h1>
                 <div class="flex space-x-4">
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Kurumsal</span>
                         </button>
                         <div class="dropdown-menu">
@@ -55,7 +73,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Sektörler</span>
                         </button>
                         <div class="dropdown-menu">
@@ -65,7 +83,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Hizmetler</span>
                         </button>
                         <div class="dropdown-menu">
@@ -75,7 +93,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Sürdürülebilirlik</span>
                         </button>
                         <div class="dropdown-menu">
@@ -85,7 +103,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Başvurular</span>
                         </button>
                         <div class="dropdown-menu">
@@ -95,7 +113,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Yönetmelikler</span>
                         </button>
                         <div class="dropdown-menu">
@@ -105,7 +123,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>Galeri</span>
                         </button>
                         <div class="dropdown-menu">
@@ -115,7 +133,7 @@
                         </div>
                     </div>
                     <div class="dropdown relative">
-                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-toggle">
                             <span>İletişim</span>
                         </button>
                         <div class="dropdown-menu">
