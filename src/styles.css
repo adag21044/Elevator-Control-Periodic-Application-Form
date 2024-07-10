@@ -1,3 +1,64 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/* Custom styles for dropdown menus */
+.dropdown-menu {
+    position: absolute;
+    background-color: #ffffff;
+    text-align: left;
+    display: none;
+    z-index: 10;
+    border: 1px solid #ccc;
+    width: auto;
+    white-space: nowrap;
+    margin-top: 8px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #374151;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f3f4f6;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Triangle icon */
+.dropdown-toggle::after {
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #4a5568;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-90deg);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    transform: rotate(0deg);
+}
+
+/* Positioning for top-right button */
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Adjust color for non-dropdown buttons */
+.non-dropdown-btn {
+    color: #374151;
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+.non-dropdown-btn:hover {
+    background-color: #10b981;
+}
