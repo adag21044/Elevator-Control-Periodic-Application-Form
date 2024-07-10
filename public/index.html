@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for horizontal dropdowns */
+        .dropdown-menu {
+            position: absolute;
+            background-color: #ffffff;
+            text-align: left;
+            display: none;
+            z-index: 10;
+            border: 1px solid #ccc;
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #374151;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f3f4f6;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <nav class="bg-white shadow mb-8">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -11,52 +43,100 @@
                 <h1 class="font-bold uppercase text-lg text-gray-800">
                     <a href="/">Food Ninja</a>
                 </h1>
+                <div class="flex space-x-4">
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Kurumsal</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Sektörler</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Hizmetler</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Sürdürülebilirlik</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Başvurular</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Yönetmelikler</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>Galeri</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span>İletişim</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Subitem 1</a>
+                            <a href="#">Subitem 2</a>
+                            <a href="#">Subitem 3</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <ul class="flex space-x-4">
                 <li class="text-gray-700 font-bold"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#" class="bg-red-500 hover:bg-green-700 text-white font-sans py-2 px-4 rounded">Belge Sorgulama</a></li>
             </ul>
         </div>
     </nav>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .tooltip {
-            position: absolute;
-            display: none;
-            background-color: #333;
-            color: #fff;
-            padding: 5px;
-            border-radius: 4px;
-            z-index: 1000;
-            white-space: nowrap;
-        }
-        .context-menu {
-            position: absolute;
-            display: none;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            padding: 10px;
-        }
-        .context-menu a {
-            display: block;
-            padding: 5px 10px;
-            color: #333;
-            text-decoration: none;
-        }
-        .context-menu a:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
-</head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
     <div class="container mx-auto">
         <main>
-            <div class="flex justify-end space-x-4 mb-4">
-                <a href="a" class="bg-red-500 hover:bg-green-700 text-white font-sans py-2 px-4 rounded">Belge Sorgulama</a>
-            </div>
             <header class="mb-8">
                 <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
                 <h3 class="text-2xl font-semibold">For Ninjas</h3>
@@ -64,7 +144,7 @@
             <section>
                 <h4 class="font-bold text-lg mb-4">Latest Recipes</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden" id="recipe1">
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
                         <img src="/mnt/data/image.png" alt="Recipe Image" class="w-full">
                         <div class="p-4">
                             <span class="block text-gray-800 font-bold text-xl mb-2">5 Bean Chilli Stew</span>
@@ -80,41 +160,29 @@
                 </div>
             </section>
         </main>
+        
         <div class="text-center mt-8 mb-8">
             <button class="bg-gray-800 text-white font-bold py-2 px-4 rounded">Gönder</button>
         </div>
     </div>
-    <div class="tooltip" id="tooltip">This is a tooltip</div>
-    <div class="context-menu" id="contextMenu">
-        <a href="#">Option 1</a>
-        <a href="#">Option 2</a>
-        <a href="#">Option 3</a>
-    </div>
+
+    <!-- JavaScript for dropdown functionality -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const recipe1 = document.getElementById('recipe1');
-            const tooltip = document.getElementById('tooltip');
-            const contextMenu = document.getElementById('contextMenu');
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            
+            dropdownMenus.forEach(menu => {
+                const parentButton = menu.previousElementSibling;
+                
+                parentButton.addEventListener('click', function () {
+                    menu.classList.toggle('hidden');
+                });
 
-            recipe1.addEventListener('mouseover', (event) => {
-                tooltip.style.display = 'block';
-                tooltip.style.left = event.pageX + 'px';
-                tooltip.style.top = event.pageY + 'px';
-            });
-
-            recipe1.addEventListener('mouseout', () => {
-                tooltip.style.display = 'none';
-            });
-
-            recipe1.addEventListener('contextmenu', (event) => {
-                event.preventDefault();
-                contextMenu.style.display = 'block';
-                contextMenu.style.left = event.pageX + 'px';
-                contextMenu.style.top = event.pageY + 'px';
-            });
-
-            document.addEventListener('click', () => {
-                contextMenu.style.display = 'none';
+                document.addEventListener('click', function (event) {
+                    if (!parentButton.contains(event.target) && !menu.contains(event.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
             });
         });
     </script>
