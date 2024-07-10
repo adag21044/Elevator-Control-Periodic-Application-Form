@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for horizontal dropdowns */
+        /* Custom styles for horizontal dropdowns and footer */
         .dropdown-menu {
             position: absolute;
             background-color: #ffffff;
@@ -71,8 +71,79 @@
         .non-dropdown-btn:hover {
             background-color: #10b981; /* Green color on hover */
         }
+
+        /* Footer styles */
+        .footer {
+            background-color: #374151;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffffff;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer img {
+            height: 30px;
+            width: auto;
+            margin: 0 10px;
+        }
     </style>
 </head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-white shadow mb-8 relative">
+        <!-- Navigation content -->
+    </nav>
+
+    <div class="container mx-auto">
+        <!-- Main content -->
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="container mx-auto flex justify-center items-center">
+            <a href="#"><img src="instagram-logo.png" alt="Instagram"></a>
+            <a href="#"><img src="youtube-logo.png" alt="YouTube"></a>
+            <a href="#"><img src="linkedin-logo.png" alt="LinkedIn"></a>
+        </div>
+        <div class="mt-4">
+            <p>Hakkımızda | Akreditasyonlar | Enerji Proje Yönetimi | Vergi ve Danışmanlık | Yönetmelikler | Ofisler | Gizlilik ve KVKK</p>
+            <p>İletişim: info@ryalcert.com | +90 216 688 XXXX | İçerenköy Mahallesi Karaman Çiftliği Yolu Caddesi Kar Plaza Kat 13 34752 Ataşehir</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for dropdown functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+            dropdownMenus.forEach(menu => {
+                const parentButton = menu.previousElementSibling;
+
+                parentButton.addEventListener('click', function () {
+                    menu.classList.toggle('hidden');
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!parentButton.contains(event.target) && !menu.contains(event.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <nav class="bg-white shadow mb-8 relative"> <!-- Add 'relative' class for positioning -->
