@@ -106,6 +106,10 @@
             padding: 20px; /* Adds padding around the content */
             color: #ffffff; /* Text color */
             text-align: center; /* Centers the text */
+            height: 400px; /* Adjust the height as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Required field indicator */
@@ -240,147 +244,78 @@
                             <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                 fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
-                                    d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                     clip-rule="evenodd" />
                             </svg>
                         </button>
                     </div>
                     <div
-                        class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                        class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-20 hidden"
                         role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         <div class="py-1" role="none">
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Type1</a>
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem">Seçenek 1</a>
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Type2</a>
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem">Seçenek 2</a>
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Type3</a>
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem">Seçenek 3</a>
                         </div>
                     </div>
-                </div>
-                <!-- Address input -->
-                <div class="mb-4">
-                    <label for="adres" class="block text-gray-700 font-bold mb-2 required">Periyodik kontrolün
-                        yapılacağı adres</label>
-                    <input type="text" id="adres" name="adres"
-                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-
-                <h4 class="font-bold text-lg mb-4 required">Unvan Seçiniz</h4>
-                <div class="relative inline-block text-left">
-                    <div>
-                        <button type="button"
-                            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                            id="options-menu" aria-expanded="true" aria-haspopup="true">
-                            Seçiniz
-                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div
-                        class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-                        role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                        <div class="py-1" role="none">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Type1</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Type2</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                role="menuitem">Type3</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flexbox container for inputs -->
-                <div class="flex-container">
-                    <!-- Asansör Bakım Firması Adı input -->
-                    <div class="mb-4">
-                        <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör
-                            Bakım Firması Adı</label>
-                        <input type="text" id="asansor_firmasi" name="asansor_firmasi"
-                            class="custom-input">
-                    </div>
-
-                    <!-- Adınız Soyadınız input -->
-                    <div class="mb-4">
-                        <label for="ad_soyad" class="block text-gray-700 font-bold mb-2 required">Adınız
-                            Soyadınız</label>
-                        <input type="text" id="ad_soyad" name="ad_soyad"
-                            class="custom-input">
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <!-- Eposta input -->
-                    <div class="mb-4">
-                        <label for="eposta" class="block text-gray-700 font-bold mb-2 required">E-Posta</label>
-                        <input type="text" id="eposta" name="eposta"
-                            class="custom-input">
-                    </div>
-
-                    <!-- Telefon input -->
-                    <div class="mb-4">
-                        <label for="telefon" class="block text-gray-700 font-bold mb-2 required">Telefon</label>
-                        <input type="text" id="telefon" name="telefon"
-                            class="custom-input">
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label for="mesaj" class="block text-gray-700 font-bold mb-2 required">Mesajınız</label>
-                    <textarea id="mesaj" name="mesaj" rows="4"
-                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
                 </div>
             </section>
 
+            <section class="mt-8">
+                <h4 class="font-bold text-lg mb-4 required">Açıklama</h4>
+                <textarea class="custom-input h-20 resize-none"></textarea>
+            </section>
+
+            <section class="mt-8">
+                <h4 class="font-bold text-lg mb-4">Kişisel Bilgiler</h4>
+                <div class="flex-container">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700" for="firstName">Adınız</label>
+                        <input type="text" id="firstName" name="firstName" class="custom-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700" for="lastName">Soyadınız</label>
+                        <input type="text" id="lastName" name="lastName" class="custom-input" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-8">
+                <h4 class="font-bold text-lg mb-4">İletişim Bilgileri</h4>
+                <div class="flex-container">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700" for="email">E-posta Adresiniz</label>
+                        <input type="email" id="email" name="email" class="custom-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700" for="phone">Telefon Numaranız</label>
+                        <input type="tel" id="phone" name="phone" class="custom-input" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-8">
+                <button type="submit"
+                    class="bg-green-500 hover:bg-green-700 text-white font-sans py-2 px-4 rounded">Gönder</button>
+            </section>
         </main>
 
-        <!-- Submission button -->
-        <div class="text-center mt-8 mb-8">
-            <button class="bg-red-800 text-white font-bold py-2 px-4 rounded">Gönder</button>
-        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container mx-auto flex justify-center items-center">
+                <a href="#" class="footer-link">Link 1</a>
+                <a href="#" class="footer-link">Link 2</a>
+                <a href="#" class="footer-link">Link 3</a>
+                <a href="#" class="footer-link">Link 4</a>
+            </div>
+        </footer>
     </div>
-
-    <!-- Footer section -->
-    <footer class="footer">
-        <div class="container mx-auto flex justify-center items-center">
-            <a href="#"><img src="/image/Instagram_icon.png" alt="Instagram"></a>
-            <a href="#"><img src="/image/Youtube-logo.png" alt="YouTube"></a>
-            <a href="#"><img src="/image/Linkedin-logo.png" alt="LinkedIn"></a>
-        </div>
-        <div class="mt-4">
-            <p>Hakkımızda | Akreditasyonlar | Enerji Proje Yönetimi | Vergi ve Danışmanlık | Yönetmelikler | Ofisler | Gizlilik ve KVKK</p>
-            <p>İletişim: info@ryalcert.com | +90 216 688 XXXX | İçerenköy Mahallesi Karaman Çiftliği Yolu Caddesi Kar Plaza Kat 13 34752 Ataşehir</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript for dropdown functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('mouseover', function () {
-                    const menu = this.nextElementSibling;
-                    menu.classList.add('block');
-                    menu.classList.remove('hidden');
-                });
-
-                toggle.addEventListener('mouseleave', function () {
-                    const menu = this.nextElementSibling;
-                    menu.classList.remove('block');
-                    menu.classList.add('hidden');
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
