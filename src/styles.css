@@ -48,3 +48,15 @@
 #address a:hover {
     background-color: #f3f4f6;
 }
+.header-background {
+    background-image: url('/image/asansorbackground.png');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the background image */
+    padding: 20px; /* Adds padding around the content */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Centers the text */
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
