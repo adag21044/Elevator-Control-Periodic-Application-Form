@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,14 @@
             width: auto;
             white-space: nowrap;
             margin-top: 8px; /* Adjust margin to create space between buttons */
+        }
+
+        .dropdown-menu.block {
+            display: block;
+        }
+
+        .dropdown-menu.hidden {
+            display: none;
         }
 
         .dropdown-menu a {
@@ -133,6 +142,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <nav class="bg-white shadow mb-8 relative">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center relative">
@@ -223,42 +233,70 @@
                 <h4 class="font-bold text-lg mb-4 required">Muayene Türünü Seçiniz</h4>
                 <div class="relative inline-block text-left">
                     <div>
-                        <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
+                        <button type="button"
+                            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            id="options-menu" aria-expanded="true" aria-haspopup="true">
                             Seçiniz
-                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z" clip-rule="evenodd" />
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
+                                    clip-rule="evenodd" />
                             </svg>
                         </button>
                     </div>
-                    <div class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div
+                        class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                        role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         <div class="py-1" role="none">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type1</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type2</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type3</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                role="menuitem">Type1</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                role="menuitem">Type2</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                role="menuitem">Type3</a>
                         </div>
                     </div>
                 </div>
                 <!-- Address input -->
                 <div class="mb-4">
-                    <label for="adres" class="block text-gray-700 font-bold mb-2 required">Periyodik kontrolün yapılacağı adres</label>
-                    <input type="text" id="adres" name="adres" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <label for="adres" class="block text-gray-700 font-bold mb-2 required">Periyodik kontrolün
+                        yapılacağı adres</label>
+                    <input type="text" id="adres" name="adres"
+                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 </div>
-                
+
                 <h4 class="font-bold text-lg mb-4 required">Unvan Seçiniz</h4>
                 <div class="relative inline-block text-left">
                     <div>
-                        <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
+                        <button type="button"
+                            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            id="options-menu" aria-expanded="true" aria-haspopup="true">
                             Seçiniz
-                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z" clip-rule="evenodd" />
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
+                                    clip-rule="evenodd" />
                             </svg>
                         </button>
                     </div>
-                    <div class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div
+                        class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                        role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         <div class="py-1" role="none">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type1</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type2</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type3</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                role="menuitem">Type1</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                role="menuitem">Type2</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                role="menuitem">Type3</a>
                         </div>
                     </div>
                 </div>
@@ -267,35 +305,42 @@
                 <div class="flex-container">
                     <!-- Asansör Bakım Firması Adı input -->
                     <div class="mb-4">
-                        <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör Bakım Firması Adı</label>
-                        <input type="text" id="asansor_firmasi" name="asansor_firmasi" class="custom-input">
+                        <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör
+                            Bakım Firması Adı</label>
+                        <input type="text" id="asansor_firmasi" name="asansor_firmasi"
+                            class="custom-input">
                     </div>
 
                     <!-- Adınız Soyadınız input -->
                     <div class="mb-4">
-                        <label for="ad_soyad" class="block text-gray-700 font-bold mb-2 required">Adınız Soyadınız</label>
-                        <input type="text" id="ad_soyad" name="ad_soyad" class="custom-input">
+                        <label for="ad_soyad" class="block text-gray-700 font-bold mb-2 required">Adınız
+                            Soyadınız</label>
+                        <input type="text" id="ad_soyad" name="ad_soyad"
+                            class="custom-input">
                     </div>
                 </div>
                 <div class="flex-container">
                     <!-- Eposta input -->
                     <div class="mb-4">
                         <label for="eposta" class="block text-gray-700 font-bold mb-2 required">E-Posta</label>
-                        <input type="text" id="eposta" name="eposta" class="custom-input">
+                        <input type="text" id="eposta" name="eposta"
+                            class="custom-input">
                     </div>
 
                     <!-- Telefon input -->
                     <div class="mb-4">
                         <label for="telefon" class="block text-gray-700 font-bold mb-2 required">Telefon</label>
-                        <input type="text" id="telefon" name="telefon" class="custom-input">
+                        <input type="text" id="telefon" name="telefon"
+                            class="custom-input">
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label for="adres" class="block text-gray-700 font-bold mb-2 required">Mesajınız</label>
-                    <input type="text" id="adres" name="adres" class="w-full px-4 py-10 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <label for="mesaj" class="block text-gray-700 font-bold mb-2 required">Mesajınız</label>
+                    <textarea id="mesaj" name="mesaj" rows="4"
+                        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
                 </div>
             </section>
-           
+
         </main>
 
         <!-- Submission button -->
@@ -322,22 +367,21 @@
         document.addEventListener('DOMContentLoaded', function () {
             const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
             dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function (event) {
+                toggle.addEventListener('mouseover', function () {
                     const menu = this.nextElementSibling;
-                    menu.classList.toggle('hidden');
-                    event.stopPropagation();
+                    menu.classList.add('block');
+                    menu.classList.remove('hidden');
                 });
-            });
 
-            document.addEventListener('click', function () {
-                const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-                dropdownMenus.forEach(menu => {
-                    if (!menu.classList.contains('hidden')) {
-                        menu.classList.add('hidden');
-                    }
+                toggle.addEventListener('mouseleave', function () {
+                    const menu = this.nextElementSibling;
+                    menu.classList.remove('block');
+                    menu.classList.add('hidden');
                 });
             });
         });
     </script>
 </body>
+
 </html>
+ 

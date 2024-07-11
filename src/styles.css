@@ -2,12 +2,12 @@
     position: absolute;
     background-color: #ffffff;
     text-align: left;
-    display: none;
+    display: none; /* Initially hidden */
     z-index: 10;
     border: 1px solid #ccc;
     width: auto;
     white-space: nowrap;
-    margin-top: 8px;
+    margin-top: 8px; /* Adjust margin to create space between buttons */
 }
 
 .dropdown-menu a {
