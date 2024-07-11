@@ -121,6 +121,16 @@
             outline: none;
             border-color: #10b981; /* Green color on focus */
         }
+
+        /* Flexbox styles for aligning inputs side by side */
+        .flex-container {
+            display: flex;
+            gap: 20px; /* Adjust the space between inputs */
+        }
+
+        .flex-container .mb-4 {
+            flex: 1; /* Allow inputs to take up equal space */
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -253,18 +263,20 @@
                     </div>
                 </div>
 
-                <!-- Asansör Bakım Firması Adı input -->
-                <div class="mb-4">
-                    <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör Bakım Firması Adı</label>
-                    <input type="text" id="asansor_firmasi" name="asansor_firmasi" class="custom-input">
-                </div>
+                <!-- Flexbox container for inputs -->
+                <div class="flex-container">
+                    <!-- Asansör Bakım Firması Adı input -->
+                    <div class="mb-4">
+                        <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör Bakım Firması Adı</label>
+                        <input type="text" id="asansor_firmasi" name="asansor_firmasi" class="custom-input">
+                    </div>
 
-                <!-- Adınız Soyadınız input -->
-                <div class="mb-4">
-                    <label for="ad_soyad" class="block text-gray-700 font-bold mb-2 required">Adınız Soyadınız</label>
-                    <input type="text" id="ad_soyad" name="ad_soyad" class="custom-input">
+                    <!-- Adınız Soyadınız input -->
+                    <div class="mb-4">
+                        <label for="ad_soyad" class="block text-gray-700 font-bold mb-2 required">Adınız Soyadınız</label>
+                        <input type="text" id="ad_soyad" name="ad_soyad" class="custom-input">
+                    </div>
                 </div>
-
             </section>
            
         </main>
