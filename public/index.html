@@ -105,6 +105,22 @@
             color: red;
             margin-left: 5px;
         }
+
+        /* Custom styles for input fields */
+        .custom-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            margin-top: 8px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .custom-input:focus {
+            outline: none;
+            border-color: #10b981; /* Green color on focus */
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -235,6 +251,18 @@
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Type3</a>
                         </div>
                     </div>
+                </div>
+
+                <!-- Asansör Bakım Firması Adı input -->
+                <div class="mb-4">
+                    <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör Bakım Firması Adı</label>
+                    <input type="text" id="asansor_firmasi" name="asansor_firmasi" class="custom-input">
+                </div>
+
+                <!-- Adınız Soyadınız input -->
+                <div class="mb-4">
+                    <label for="ad_soyad" class="block text-gray-700 font-bold mb-2 required">Adınız Soyadınız</label>
+                    <input type="text" id="ad_soyad" name="ad_soyad" class="custom-input">
                 </div>
 
             </section>
