@@ -123,20 +123,31 @@
 .non-dropdown-btn:hover {
     background-color: #10b981; /* Green color on hover */
 }
+
 .royalcert-icon {
     position: fixed; /* Elementi sabitler */
     left: 0; /* Sol tarafa yaslar */
     bottom: 0; /* Alt tarafa yaslar */
     margin: 10px; /* Kenarlardan biraz boşluk bırakır */
 }
+
 .Instagram_icon {
-    left: 60px; /* RoyalCert ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
+    position: absolute; /* Elementi sabitler */
+    bottom: 0; /* Alt tarafa yaslar */
+    left: 40px; /* RoyalCert ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
+    margin: 10px; /* Kenarlardan biraz boşluk bırakır */
 }
 
 .Youtube-logo {
-    left: 120px; /* Instagram ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
+    position: absolute; /* Elementi sabitler */
+    bottom: 0; /* Alt tarafa yaslar */
+    left: 100px; /* RoyalCert ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
+    margin: 10px; /* Kenarlardan biraz boşluk bırakır */
 }
 
 .Linkedin-logo {
-    left: 180px; /* YouTube ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
+    position: absolute; /* Elementi sabitler */
+    bottom: 0; /* Alt tarafa yaslar */
+    left: 160px; /* RoyalCert ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
+    margin: 10px; /* Kenarlardan biraz boşluk bırakır */
 }
