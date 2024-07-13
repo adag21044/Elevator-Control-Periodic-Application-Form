@@ -152,10 +152,12 @@
             flex: 1;
         }   
     </style>
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <nav class="bg-white shadow mb-8 relative">
+    <nav class="bg-white shadow mb-8 relative" style="margin-bottom: 0px;">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center relative">
             <div class="flex items-center space-x-2">
                 <img src="/public/image.png" alt="Logo" class="h-8 w-8">
@@ -240,20 +242,25 @@
     <div class="container mx-auto">
         <!-- Main content -->
         <main>
-            <section>
+            <section >
+                
                 <h4 class="font-bold text-lg mb-4 required">Muayene Türünü Seçiniz</h4>
-                <div class="relative inline-block text-left">
-                    <div class="relative inline-block text-left">
-                        <button type="button"
+                <div class="relative inline-block text-left" >
+                    <div class="relative inline-block text-left" style="width: 1540px;">
+                        <select id="select" type="button"
                                 class="inline-flex justify-center w-full max-w-full rounded-md border border-gray-300 shadow-sm px-20 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Seçiniz
                             <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                  fill="currentColor" aria-hidden="true">
+
                                 <path fill-rule="evenodd"
                                       d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
                                       clip-rule="evenodd" />
                             </svg>
-                        </button>
+                            <option value="op#1">op1</option>
+                            <option value="op#2">op2</option>
+                            <option value="op#3">op3</option>
+                        </select>
                     </div>
                     <div
                         class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
@@ -280,9 +287,9 @@
                 </div>
 
                 <h4 class="font-bold text-lg mb-4 required">Unvan Seçiniz</h4>
-                <div class="relative inline-block text-left">
+                <div class="relative inline-block text-left" style="width: 1540px;">
                     <div>
-                        <button type="button"
+                        <select id="select" name="select"
                             class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             id="options-menu" aria-expanded="true" aria-haspopup="true">
                             Seçiniz
@@ -292,7 +299,12 @@
                                     d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.294-3.294a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z"
                                     clip-rule="evenodd" />
                             </svg>
-                        </button>
+                            <option>--unvan seçiniz--</option>
+                            <option value="unvan #1">unvan #1</option>
+                            <option value="unvan #2">unvan #2</option>
+                            <option value="unvan #3">unvan #3</option>
+                        </select>
+                        
                     </div>
                     <div
                         class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
@@ -315,7 +327,7 @@
                 <div class="flex-container">
                     <!-- Asansör Bakım Firması Adı input -->
                     <div class="mb-4">
-                        <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 required">Asansör
+                        <label for="asansor_firmasi" class="block text-gray-700 font-bold mb-2 ">Asansör
                             Bakım Firması Adı</label>
                         <input type="text" id="asansor_firmasi" name="asansor_firmasi"
                             class="custom-input">
@@ -345,7 +357,7 @@
                     </div>
                 </div>
                 <div class="mb-4">
-                    <label for="mesaj" class="block text-gray-700 font-bold mb-2 required">Mesajınız</label>
+                    <label for="mesaj" class="block text-gray-700 font-bold mb-2 ">Mesajınız</label>
                     <textarea id="mesaj" name="mesaj" rows="4"
                         class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
                 </div>
@@ -362,37 +374,111 @@
     <!-- Footer section -->
     <footer class="footer">
         <div class="container mx-auto flex justify-center items-center">
-            <a href="#"><img src="/image/Instagram_icon.png" alt="Instagram"></a>
-            <a href="#"><img src="/image/Youtube-logo.png" alt="YouTube"></a>
-            <a href="#"><img src="/image/Linkedin-logo.png" alt="LinkedIn"></a>
-        </div>
-        <a href="https://www.royalcert.com" class="royalcert-icon" target="_blank">
-            <img src="/image/royal.png" alt="RoyalCert">
-        </a>
-        <div class="mt-4">
             
-                <div class="flex-container">  <div class="column">    
-                <p><a href="#hakkimizda">Hakkımızda</a></p>
-                <p><a href="#akreditasyonlar">Akreditasyonlar</a></p>
-                <p><a href="#Enerjİ"></a>Enerji</p>
-                <p><a href="#Proje Yönetimi"></a>Proje Yönetimi</p>
-                <p><a href="#Vergi ve Danışlmanlık"></a>Vergi ve Danışmanlık</p>
-                </div>
+        </div>
+        
+        <div class="mt-4">
+            <table>
+                <tr>
+                    <td></td>
+                    <td><a href="#Linkler" style="color: red;">Linkler</a></td>
+                    <td></td>
+                    <td><a href="#İletişim" style="color: red;">İletişim</a></td>
 
-                <div class="column">
-                <p><a href="#Yönetmelikler"></a>Yönetmelikler</p>
-                <p><a href="#Ofisler"></a>Ofisler</p>
-                <p><a href="#Gizlilik ve KVKK"></a>Gizlilik ve KVKK</p>
-                <p><a href="#Kurumsal Kimlik"></a>Kurumsal Kimlik</p>
-                <p><a href="Application"></a>Application</p>
-                </div>
+                </tr>
+                <tr>
+
+                    <td><a href="https://www.royalcert.com" class="royalcert-icon" target="_blank">
+                        <img src="/image/royal.png" alt="RoyalCert">
+                    </a></td>
+
+                    <td><a href="#hakkimizda">Hakkımızda</a></td>
+
+                    <td><a href="#Yönetmelikler">Yönetmelikler</a></td>
+                    <td><p style="display: inline-block; margin-left: 400px;">İletişim: info@ryalcert.com</p></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#akreditasyonlar">Akreditasyonlar</a></td>
+                    <td><a href="#Ofisler">Ofisler</a></td>
+                    <td><p style="display: inline-block; margin-left: 400px;">+90 216 688 XXXX</p></td>
+                </tr>    
+                   
+                    <tr>
+                        <td>
+                            <div class="elementor-social-icons-wrapper elementor-grid">
+                                <span class="elementor-grid-item">
+                                <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-f27eb82" href="https://www.facebook.com/RoyalCertTR/" target="_blank">
+                                <span class="elementor-screen-only">Facebook</span>
+                                <i class="fab fa-facebook"></i>                    </a>
+                                </span>
+                                <span class="elementor-grid-item">
+                                <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-4067d8b" href="https://twitter.com/royalcerttr" target="_blank">
+                                <span class="elementor-screen-only">Twitter</span>
+                                <i class="fab fa-twitter"></i>                    </a>
+                                </span>
+                                <span class="elementor-grid-item">
+                                <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-f172d08" href="https://www.youtube.com/@RoyalCertTurkiye/" target="_blank">
+                                <span class="elementor-screen-only">Youtube</span>
+                                <i class="fab fa-youtube"></i>                    </a>
+                                </span>
+                                <span class="elementor-grid-item">
+                                <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-6e48336" href="https://www.linkedin.com/company/royalcert-turkey/" target="_blank">
+                                <span class="elementor-screen-only">Linkedin-in</span>
+                                <i class="fab fa-linkedin-in"></i>                    </a>
+                                </span>
+                                <span class="elementor-grid-item">
+                                <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-2d3bac9" href="https://www.instagram.com/royalcertturkiye/" target="_blank">
+                                <span class="elementor-screen-only">Instagram</span>
+                                <i class="fab fa-instagram"></i>                    </a>
+                                </span></div>
+                        </td>
+                        <td><a href="#Enerjİ">Enerji</a></td>
+                        <td><a href="#Gizlilik ve KVKK">Gizlilik ve KVKK</a></td>
+                        <td><p style="display: inline-block; margin-left: 400px;">İçerenköy Mahallesi Karaman Çiftliği Yolu Caddesi Kar Plaza Kat 13 34752 Ataşehir</p></td>
+                        
+
+                    </tr>
+                    
+                    
+                
+                <tr>
+                    <td></td>
+                    
+                    <td><a href="#Proje Yönetimi">Proje Yönetimi</a></td>
+                    <td><a href="#İletişim">Kurumsal Kimlik</a></td>
+                    
+                    
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#Vergi ve Danışlmanlık">Vergi ve Danışmanlık</a></td>
+                    <td><a href="#Application">Application</a></td>
+                   
+                    
+                </tr>
+
+                
+                    
+                    
+                    
+                   
+                    
+                
+            </table>
+                
+            
+             <table>
+                
+             </table>   
+                
+             
                 
                 
-                <div class="column">
-                                        <p style="display: inline-block; margin-left: 400px;">İletişim: info@ryalcert.com</p>
-                                        <p style="display: inline-block; margin-left: 400px;">+90 216 688 XXXX</p>
-                                        <p style="display: inline-block; margin-left: 400px;">İçerenköy Mahallesi Karaman Çiftliği Yolu Caddesi Kar Plaza Kat 13 34752 Ataşehir</p>
-                                    </div>
+            
+                                        
+                                   
                   
                     
         </div>
