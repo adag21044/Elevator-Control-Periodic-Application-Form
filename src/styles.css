@@ -151,3 +151,54 @@
     left: 160px; /* RoyalCert ikonunun genişliğine ve arzu ettiğiniz boşluğa bağlı olarak ayarlayın */
     margin: 10px; /* Kenarlardan biraz boşluk bırakır */
 }
+.footer {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.column h2 {
+    margin-bottom: 10px;
+}
+
+.column p {
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 5px;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.flex-container {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1; /* Makes each column take up half the available space */
+    padding: 20px; /* Adjust padding as needed */
+  }
+
+  
+  
