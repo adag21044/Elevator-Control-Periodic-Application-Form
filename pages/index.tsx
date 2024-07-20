@@ -1,25 +1,20 @@
 import React from 'react';
+import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
-import FormSection from '../components/FormSection';
 import Footer from '../components/Footer';
+import FormSection from '../components/FormSection';
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div>
       <Navbar />
       <Header />
-      <div className="container mx-auto">
-        <main>
-          <FormSection />
-        </main>
-        <div className="text-center mt-8 mb-8">
-          <button className="bg-red-800 text-white font-bold py-2 px-4 rounded">Gönder</button>
-        </div>
-      </div>
+      <main className="container mx-auto px-6 py-8">
+        <h2 className="text-3xl font-semibold mb-6">Form Section</h2>
+        <FormSection />
+      </main>
       <Footer />
     </div>
   );
-};
-
-export default Home;
+}
