@@ -1,109 +1,177 @@
-import React from 'react';
+// components/ElevatorInspectionForm.tsx
+
+
+import React, { useState } from 'react';
+
 const FormSection = () => {
-    return (
-      <section className="container mx-auto my-8">
-        <h4 className="font-bold text-lg mb-4 required">Muayene Türünü Seçiniz</h4>
-        <div className="relative inline-block text-left w-full mb-4">
-          <select
-            id="select"
-            className="inline-flex justify-center w-full max-w-full rounded-md border border-gray-300 shadow-sm px-20 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            <option value="op#1">op1</option>
-            <option value="op#2">op2</option>
-            <option value="op#3">op3</option>
-          </select>
-        </div>
-  
-        <div className="mb-4">
-          <label htmlFor="adres" className="block text-gray-700 font-bold mb-2 required">
-            Periyodik kontrolün yapılacağı adres
+  const [formData, setFormData] = useState({
+    inspectionType: '',
+    inspectionAddress: '',
+    title: '',
+    companyName: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Form gönderme işlemlerini burada yapabilirsiniz
+    console.log(formData);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+      <div className="mb-4">
+        <label htmlFor="inspectionType" className="block text-gray-700 font-bold mb-2">
+          Muayene Turunu seçiniz *
+        </label>
+        <select
+          id="inspectionType"
+          name="inspectionType"
+          value={formData.inspectionType}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+        >
+          <option value="">--Seçiniz--</option>
+          <option value="type1">Type 1</option>
+          <option value="type2">Type 2</option>
+        </select>
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="inspectionAddress" className="block text-gray-700 font-bold mb-2">
+          Periyodik kontrolun yapılacağı adres *
+        </label>
+        <input
+          type="text"
+          id="inspectionAddress"
+          name="inspectionAddress"
+          value={formData.inspectionAddress}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+          required
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="title" className="block text-gray-700 font-bold mb-2">
+          Unvan Seçiniz *
+        </label>
+        <select
+          id="title"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+        >
+          <option value="">--Seçiniz--</option>
+          <option value="mr">Mr.</option>
+          <option value="mrs">Mrs.</option>
+          <option value="ms">Ms.</option>
+        </select>
+      </div>
+
+      <div className="mb-4 flex gap-4">
+        <div className="w-1/2">
+          <label htmlFor="companyName" className="block text-gray-700 font-bold mb-2">
+            Asansör Bakım Firması Adı
           </label>
           <input
             type="text"
-            id="adres"
-            name="adres"
-            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            id="companyName"
+            name="companyName"
+            value={formData.companyName}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded"
           />
         </div>
-  
-        <h4 className="font-bold text-lg mb-4 required">Unvan Seçiniz</h4>
-        <div className="relative inline-block text-left w-full mb-4">
-          <select
-            id="select"
-            name="select"
-            className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            <option>--unvan seçiniz--</option>
-            <option value="unvan#1">unvan#1</option>
-            <option value="unvan#2">unvan#2</option>
-            <option value="unvan#3">unvan#3</option>
-          </select>
-        </div>
-  
-        <div className="flex gap-4">
-          <div className="mb-4 flex-1">
-            <label htmlFor="asansor_firmasi" className="block text-gray-700 font-bold mb-2">
-              Asansör Bakım Firması Adı
-            </label>
-            <input
-              type="text"
-              id="asansor_firmasi"
-              name="asansor_firmasi"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div className="mb-4 flex-1">
-            <label htmlFor="ad_soyad" className="block text-gray-700 font-bold mb-2 required">
-              Adınız Soyadınız
-            </label>
-            <input
-              type="text"
-              id="ad_soyad"
-              name="ad_soyad"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-        </div>
-  
-        <div className="flex gap-4">
-          <div className="mb-4 flex-1">
-            <label htmlFor="eposta" className="block text-gray-700 font-bold mb-2 required">
-              E-Posta
-            </label>
-            <input
-              type="email"
-              id="eposta"
-              name="eposta"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <div className="mb-4 flex-1">
-            <label htmlFor="telefon" className="block text-gray-700 font-bold mb-2 required">
-              Telefon
-            </label>
-            <input
-              type="tel"
-              id="telefon"
-              name="telefon"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-        </div>
-  
-        <div className="mb-4">
-          <label htmlFor="mesaj" className="block text-gray-700 font-bold mb-2">
-            Mesajınız
+        <div className="w-1/2">
+          <label htmlFor="firstName" className="block text-gray-700 font-bold mb-2">
+            Adınız
           </label>
-          <textarea
-            id="mesaj"
-            name="mesaj"
-            rows={4}
-            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          ></textarea>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded"
+            required
+          />
         </div>
-      </section>
-    );
-  };
-  
-  export default FormSection;
-  
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="lastName" className="block text-gray-700 font-bold mb-2">
+          Soyadınız *
+        </label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          value={formData.lastName}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+          required
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+          E-Posta *
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+          required
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">
+          Telefon *
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+          required
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
+          Mesajınız
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full px-3 py-2 border rounded"
+        ></textarea>
+      </div>
+
+      <button type="submit" className="w-full bg-red-500 text-white font-bold py-2 rounded">
+        Gönder
+      </button>
+    </form>
+  );
+};
+
+export default FormSection;
